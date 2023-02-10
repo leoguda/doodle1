@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300&display=swap"   rel="stylesheet" type="text/css">
+<style>
+body {
+  background:url(https://wallpapercave.com/wp/wp8738754.png);
+}
+
+.main {
+  margin-top: 20px;
+  display:grid;
+  grid-template-areas:
+  "header"
+  "content"
+  "content"
+  "footer";
+  grid-template-columns: repeat(auto-fit, 33,3%);
+  grid-template-rows:100px 950px 900px 100px;
+  grid-gap:10px 10px;
+
+}
+
+.clouds {
+  position:absolute;
+  z-index: -1;
+  animation-name: swiming-clouds;
+  animation-duration:125s;
+  animation-iteration-count:infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes swiming-clouds{
+  0% {top:100px;
+  left:0px;
+  }
+  8% {top:220px;
+  left:1400px;
+  }
+  16% {top:340px;
+  left:0px;
+  }
+  24% {top:460px;
+  left:1400px;
+  }
+  32% {top:580px;
+  left:0px;
+  }
+  40% {top:700px;
+  left:1400px;
+  }
+  50% {top:700px;
+  left:0px;
+  }
+  58% {top:580px;
+  left:1400px;
+  }
+  66% {top:460px;
+  left:0px;
+  }
+  74% {top:340px;
+  left:1400px;
+  }
+  82% {top:220px;
+  left:0px;
+  }
+  90% {top:100px;
+    left:1400px;
+    }
+  100% {top:100px;
+    left:0px;
+    }
+}
+
+.clouds-1 {
+  position:absolute;
+  z-index: -1;
+  animation-name: swiming-clouds-1;
+  animation-duration:57s;
+  animation-iteration-count:infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes swiming-clouds-1{
+  0% {top:100px;
+  right:0px;
+  }
+  8% {top:220px;
+  right:1500px;
+  }
+  16% {top:340px;
+  right:0px;
+  }
+  24% {top:460px;
+  right:1500px;
+  }
+  32% {top:580px;
+  right:0px;
+  }
+  40% {top:700px;
+  right:1500px;
+  }
+  50% {top:700px;
+  right:0px;
+  }
+  58% {top:580px;
+  right:1500px;
+  }
+  66% {top:460px;
+  right:0px;
+  }
+  74% {top:340px;
+  right:1500px;
+  }
+  82% {top:220px;
+  right:0px;
+  }
+  90% {top:100px;
+  right:1500px;
+    }
+  100% {top:100px;
+  right:0px;
+    }
+}
+
+.clouds-2 {
+  position:absolute;
+  z-index: -1;
+  animation-name: swiming-clouds-2;
+  animation-duration:64s;
+  animation-iteration-count:infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes swiming-clouds-2{
+  0% {bottom:100px;
+  left:0px;
+  }
+  8% {bottom:220px;
+  left:1600px;
+  }
+  16% {bottom:340px;
+  left:0px;
+  }
+  24% {bottom:460px;
+  left:1600px;
+  }
+  32% {bottom:580px;
+  left:0px;
+  }
+  40% {bottom:700px;
+  left:1600px;
+  }
+  50% {bottom:700px;
+  left:0px;
+  }
+  58% {bottom:580px;
+  left:1600px;
+  }
+  66% {bottom:460px;
+  left:0px;
+  }
+  74% {bottom:340px;
+  left:1600px;
+  }
+  82% {bottom:220px;
+  left:0px;
+  }
+  90% {bottom:100px;
+  left:1600px;
+  }
+  100% {bottom:100px;
+  left:0px;
+  }
+}
+
+.header {
+  margin:auto;
+  padding-left:15px;
+  padding-right: 15px;
+  justify-self: center;
+  align-self: center;
+  grid-area:1/2/2/3;
+  background-color: RGB(152, 180, 212);
+  font-size: 20px;
+  font-weight: 800;
+  border-radius:43px;
+  animation-name:header-gradient;
+  animation-duration:5s;
+  animation-iteration-count: infinite;
+  color:white;
+  text-shadow:0 0 6px white, 0 0 5px black;
+  background-color:rgb(0,0,70);
+}
+
+
+
+@keyframes header-gradient {
+0% {text-shadow:0 0 10px black, 0 0 7px white;
+  box-shadow: 0 0 50px rgb(0,0,70);}
+50% {box-shadow: 0 0 100px rgb(0,0,170);
+text-shadow:0 0 10px white, 0 0 7px black;}
+100% {box-shadow: 0 0 50px rgb(0,0,70);
+text-shadow:0 0 10px black, 0 0 7px white;}
+}
+
+.two {
+  max-width:800px;
+  grid-area:2/1/3/2;
+}
+
+.moon-gif:hover {
+  animation-name:moon-rotate;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moon-rotate {
+  100% {
+    transform:rotate(-360deg);
+  }
+}
+
+.text-content {
+font-size:17px;
+}
+
+.sun-gif:hover {
+  animation-name:sun-rotate;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sun-rotate {
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
+
+.text{
+  background: center url(https://image.ec21.com/image/vagrant02/oimg_GC02664905_CA05421913/Super-Black-Polished-Tile-JCJ607-600X600-800X800.jpg);
+opacity:0.9;
+height:750px;
+  width:600px;
+  padding: 15px;
+  justify-self:center;
+  text-align: center;
+  border-radius:20%;
+  grid-area:2/2/3/3;
+  background-color:transparent;
+  font-family: Noto Sans Georgian,monospace;
+  color:white;
+  text-shadow: 0 0 30px white, 0 0 15px black;
+  z-index: 2;
+  box-shadow: 0 5px 10px black;
+  line-height: 30px;
+}
+
+.text:hover {
+  animation-name:text-background;
+  animation-fill-mode: forwards;
+  transition: ease-out;
+  animation-duration: 0.5s;
+}
+
+@keyframes text-background {
+  0% {  box-shadow: 0 5px 1px black;}
+  100% {   box-shadow: 0 5px 20px black;
+    background:url(https://www.teahub.io/photos/full/17-171152_navy-blue-wallpaper-top-solid-blue-wallpaper-full.jpg);
+}
+}
+
+.four {justify-self:end;
+  max-width:800px;
+  height:800px;
+  grid-area:2/3/3/4;
+
+}
+
+.animation {
+  grid-area:3/1/4/4;
+  display:grid;
+  grid-template-columns:1fr 10fr 1fr;
+  grid-template-rows:900px;
+  grid-column-gap:5px;
+}
+
+.footer {
+  grid-area: 4/1/5/4;
+}
+
+.animation-1 {
+  z-index:1;
+}
+
+.animation-2 {
+  min-width: 0;
+  min-height: 0;
+  animation-name:ms-rs;
+  animation-iteration-count:infinite;
+  animation-duration: 30s;
+border-radius:30px;
+
+}
+
+.animation-3 {
+  z-index:1;
+}
+
+:root {
+--position-all:relative;
+}
+
+@keyframes ms-rs{
+  0% {background-color:lightblue;}
+  50% {background-color:hsl(240,100%,10%);}
+  100% {background-color:lightblue;}
+}
+
+#big-star {
+  /*only change code below this line*/
+  position:absolute;
+  /*only change code above this line*/
+  color:transparent;
+
+}
+
+
+#big-star::before{
+  content:"";
+  /*only change code below this line*/
+  position:absolute;
+  /*only change code above this line*/
+background-image:linear-gradient(to top right, rgb(255,80,0),rgb(255,199,0));
+border-radius:50%;
+height:150px;
+width:150px;
+margin:10em 50em 0em 50em;
+opacity:1;
+  box-shadow:0em 0em 35em yellow, 0em 0em 20em yellow;
+  animation-name:sun-shine;
+animation-duration:30s;
+animation-iteration-count:infinite;
+animation-timing-function:linear;
+}
+
+
+@keyframes sun-shine {
+0% {opacity:0;}
+49% {opacity:0;}
+50% {top:33em; left:-70em; opacity:0;}
+55% {top:26em; left:-58em; opacity:0;}
+60% {top:20em; left:-46em; opacity:0.2;}
+65% {top:14em; left:-34em; opacity:1;}
+70% {top:11em; left:-22em;}
+75% {top:9em; left:-10em;}
+80% {top:11em; left:2em;}
+85% {top:14em; left:14em; opacity:1;}
+90% {top:20em; left:26em; opacity:0.6;}
+95% {top:26em; left:38em; opacity:0;}
+100% {top:33em; left:50em; opacity:0;}
+}
+
+#big-star::after{
+  content:"";
+  /*only change code below this line*/
+  position:absolute;
+  /*only change code above this line*/
+background-color:transparent;
+border-radius:50%;
+height:150px;
+width:150px;
+margin:10em 50em 0em 50em;
+opacity:1;
+box-shadow:20px 20px 0 white, 30px 30px 25px rgba(255,255,255,0.5), inset -9px -9px 9px rgba(255,255,255,0.1);
+animation-name:moon-shine;
+animation-duration:30s;
+animation-iteration-count:infinite;
+animation-timing-function:linear;
+}
+
+
+@keyframes moon-shine {
+  0% {top:33em; left:-70em; opacity:0;}
+  5% {top:26em; left:-58em; opacity:0;}
+  10% {top:20em; left:-46em; opacity:0.2;}
+  15% {top:14em; left:-34em; opacity:1;}
+20% {top:11em; left:-22em;}
+25% {top:9em; left:-10em;}
+30% {top:11em; left:2em;}
+35% {top:14em; left:14em; opacity:1;}
+40% {top:20em; left:26em; opacity:0.6;}
+45% {top:26em; left:38em; opacity:0;}
+50% {top:33em; left:50em; opacity:0;}
+51% {opacity:0;}
+100% {opacity:0;}
+}
+
+
+.star-one {
+background-color:white;
+border-radius:50%;
+height:11px;
+width:11px;
+color:transparent;
+animation-iteration-count:infinite;
+}
+
+.t-1 {
+height:3px;
+width:3px;
+position:var(--position-all);
+top:13em;
+left:14em;
+animation-name:twinkle;
+animation-duration:650ms;
+}
+
+.t-2 {
+height:10.5px;
+width:10.5px;
+position:var(--position-all);
+top:2em;
+left:10em;
+animation-name:twinkle;
+animation-duration:590ms;
+}
+
+.t-3 {
+height:15px;
+width:15px;
+position:var(--position-all);
+top:20em;
+left:80em;
+animation-name:twinkle;
+animation-duration:670ms;
+}
+
+.t-4 {
+height:9.8px;
+width:9.8px;
+position:var(--position-all);
+top:11em;
+left:60em;
+animation-name:twinkle;
+animation-duration:650ms;
+}
+
+.t-5 {
+height:8px;
+width:8px;
+position:var(--position-all);
+top:10em;
+left:30em;
+animation-name:twinkle;
+animation-duration:700ms;
+}
+
+.t-6 {
+height:9px;
+width:9px;
+position:var(--position-all);
+top:35em;
+left:70em;
+animation-name:twinkle;
+animation-duration:800ms;
+}
+
+.t-7 {
+height:9px;
+width:9px;
+position:var(--position-all);
+top:25em;
+left:80em;
+animation-name:twinkle;
+animation-duration:700ms;
+}
+
+.t-8 {
+height:7.5px;
+width:7.5px;
+position:var(--position-all);
+top:10em;
+left:95em;
+animation-name:twinkle;
+animation-duration:680ms;
+}
+
+.t-9 {
+height:15.5px;
+width:15.5px;
+position:var(--position-all);
+top:40em;
+left:80em;
+animation-name:twinkle;
+animation-duration:450ms;
+}
+
+.t-10 {
+height:11.9px;
+width:11.9px;
+position:var(--position-all);
+top:-10em;
+left:60em;
+animation-name:twinkle;
+animation-duration:600ms;
+}
+
+.t-11 {
+height:10px;
+width:10px;
+position:var(--position-all);
+top:7em;
+left:778px;
+animation-name:twinkle;
+animation-duration:587ms;
+}
+
+.t-12 {
+height:9px;
+width:9px;
+position:var(--position-all);
+top:280px;
+left:478px;
+animation-name:twinkle;
+animation-duration:590ms;
+}
+
+.t-13 {
+height:9.5px;
+width:9.5px;
+position:var(--position-all);
+top:8em;
+left:45em;
+animation-name:twinkle;
+animation-duration:610ms;
+}
+
+.t-14 {
+height:15px;
+width:15px;
+position:var(--position-all);
+top:-10em;
+left:80em;
+animation-name:twinkle;
+animation-duration:600ms;
+}
+
+.t-15 {
+height:11px;
+width:11px;
+position:var(--position-all);
+top:-15em;
+left:33em;
+animation-name:twinkle;
+animation-duration:785ms;
+}
+
+.t-16 {
+height:12px;
+width:12px;
+position:var(--position-all);
+top:-10em;
+left:40em;
+animation-name:twinkle;
+animation-duration:715ms;
+}
+
+.t-17 {
+height:9px;
+width:9px;
+position:var(--position-all);
+top:373px;
+left:337px;
+animation-name:twinkle;
+animation-duration:625ms;
+}
+
+.t-18 {
+height:13px;
+width:13px;
+position:var(--position-all);
+top:274px;
+left:664px;
+animation-name:twinkle;
+animation-duration:485ms;
+}
+
+.t-19 {
+height:7.5px;
+width:7.5px;
+position:var(--position-all);
+top:257px;
+left:199px;
+animation-name:twinkle;
+animation-duration:650ms;
+}
+
+.t-20 {
+height:15.5px;
+width:15.5px;
+position:var(--position-all);
+top:299x;
+left:503px;
+animation-name:twinkle;
+animation-duration:450ms;
+}
+
+
+.t-21{
+height:11.9px;
+width:11.9px;
+position:var(--position-all);
+top:130px;
+left:718px;
+animation-name:twinkle;
+animation-duration:600ms;
+}
+
+
+.t-22 {
+height:10px;
+width:10px;
+position:var(--position-all);
+top:190px;
+left:778px;
+animation-name:twinkle;
+animation-duration:500ms;
+}
+
+@keyframes twinkle{
+30% {
+opacity:0.4;
+transform:scale(0.1);}
+100% {
+opacity:1;
+transform:scale(1);}
+}
+
+.footer {
+  font-size: 18px;
+  font-family: Noto Sans Georgian,monospace;
+  color:rgba(255,255,255,0.7);
+  text-align: center;
+}
+
+.yt {
+  text-decoration:none;
+  color:rgba(255,255,255,0.7);
+  text-shadow:0 0 20px white, 0 0 10px white;
+  font-size: 20px;
+}
+
+</style>
+    <title>მზე და მთვარე</title>
+  </head>
+  <body>
+    <div class="clouds-all">
+      <img class="clouds" style="width:500px;" src="https://www.pikpng.com/pngl/b/472-4723400_clouds-transparent-pixel-art-clouds-clipart.png" alt="clouds-big">
+      <img class="clouds-1" style="width:400px;" src="https://www.pikpng.com/pngl/b/472-4723400_clouds-transparent-pixel-art-clouds-clipart.png" alt="clouds-medium">
+      <img class="clouds-2" style="width:300px;" src="https://www.pikpng.com/pngl/b/472-4723400_clouds-transparent-pixel-art-clouds-clipart.png" alt="clouds-small">
+      </div>
+
+   <div class="main">
+      <div class="header"><h1>მზე და მთვარე</h1></div>
+
+      <div class="two">
+        <img class="sun-gif" src="https://i.pinimg.com/originals/2e/69/fc/2e69fc7655735baea3651154dfe8c2bc.gif" alt="sun gif">
+       </div>
+
+      <div class="text">
+        <h2  style="text-align:center; color:white;">
+          ...
+        </h2>
+        <h3 style="font-size:22px; font-weight:500;"><strong>მათი ამბავი ასეთია: </strong></h3>
+          <p class="text-content">ეს იმ დროს მოხდა, როცა მზე და მთვარე ბავშვები იყვნენ და დედამიწაზე დადიოდნენ, ლაღობდნენ, ერთობოდნენ. </p>
+          <p class="text-content">ერთხელ მზე და მთვარე ერთ სოფელში მოხვდნენ. ხედავენ, ქალი ძროხას წველის. აქამდე არასოდეს ენახათ ეს სანახაობა, გაუკვირდათ და კენჭების სროლა დაუწყეს ძროხას. ქალმა რომ ვერაფრით მოიშორა აბეზარი ბავშვები, იქვე ძროხის ახალ ფუნას დაავლო ხელი და ესროლა სახეში მზეს და მთვარეს.</p>
+          <p class="text-content">შეშინებულ-შეურაცხყოფილ მთვარე, მანამ მირბოდა იმ ადგილიდან, სანამ ჩიხი არ შეხვდა წინ. გადაეშვა, აფრინდა და სამუდამოდ დატოვა დედამიწა და ცაში აიჭრა. მზე არ დაიბნა, ხელი გობში ჩაყო, პეშვით რძე ამოიღო და სახე მოიწმინდა, მერე ისიც მთვარის გზას გაჰყვა.</p>
+          <p class="text-content">ამიტომ არის, ამმობენ, რომ მთვარეს დღემდე ლაქები აქვს – ეს მის სახეზე შემხმარი ფუნაა. მზეს კი რძით აქვს მობანილი სახე და ამიტომაც ეწოდება მზეს ბჟა (მეგრულად ბჟა მზესაც ნიშნავს და რძესაც).</P>
+      </div>
+      <div class="four">
+        <img class="moon-gif" src="https://s3.eu-west-2.amazonaws.com/uploads-7e3kk3/35405/giphy_8.ef54825a12c8.gif" alt="moon gif">
+      </div>
+
+      <div class="animation ">
+         <div class="animation-1"></div>
+         <div class="animation-2">
+           <div><p id="big-star">1234</p></div>
+           <div><p class="t-1 star-one">1</p></div>
+           <div><p class="t-2 star-one">2</p></div>
+           <div><p class="t-3 star-one">3</p></div>
+           <div><p class="t-4 star-one">4</p></div>
+           <div><p class="t-5 star-one">5</p></div>
+           <div><p class="t-6 star-one">6</p></div>
+           <div><p class="t-7 star-one">7</p></div>
+           <div><p class="t-8 star-one">8</p></div>
+           <div><p class="t-9 star-one">9</p></div>
+           <div><p class="t-10 star-one">10</p></div>
+           <div><p class="t-11 star-one">1</p></div>
+           <div><p class="t-12 star-one">2</p></div>
+           <div><p class="t-13 star-one">3</p></div>
+           <div><p class="t-14 star-one">4</p></div>
+           <div><p class="t-15 star-one">5</p></div>
+           <div><p class="t-16 star-one">6</p></div>
+           <div><p class="t-17 star-one">7</p></div>
+           <div><p class="t-18 star-one">8</p></div>
+           <div><p class="t-19 star-one">9</p></div>
+           <div><p class="t-20 star-one">10</p></div>
+           <div><p class="t-21 star-one">8</p></div>
+           <div><p class="t-22 star-one">8</p></div>
+         </div>
+         <div class="animation-3"></div>
+      </div>
+
+      <div class="footer">
+       <!--<p class="footer">მოვკვტი და გარდავიცვალე ამის კეთებაში :') 3+საათით :')
+</p>-->
+<p>კაი რამეა => <a class="yt" href="https://www.youtube.com/watch?v=nbbMyc4B8-4&list=PLwvkCw9CgNaiCQsWfBOX2nBtuR7-w9zdm&index=38&ab_channel=Gestalt">მოუსმინე</a></p>
+      </div>
+    </div>
+
+  </body>
+</html>
